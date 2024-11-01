@@ -1,6 +1,5 @@
 package uz.ifood.app.api.v1.entity
 
-import org.hibernate.annotations.Fetch
 import java.io.Serializable
 import java.time.Instant
 import javax.persistence.Column
@@ -10,7 +9,6 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.JoinColumn
-import javax.persistence.JoinColumns
 import javax.persistence.JoinTable
 import javax.persistence.ManyToMany
 import javax.persistence.Table
@@ -19,7 +17,6 @@ import javax.persistence.Table
 @Entity
 @Table(name = "roles")
 data class Role(
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected val id: Long,
