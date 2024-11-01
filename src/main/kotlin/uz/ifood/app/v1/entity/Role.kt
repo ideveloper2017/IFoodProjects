@@ -25,7 +25,7 @@ data class Role(
     protected val id: Long,
 
     @Column(name="name")
-    protected val name: String,
+    public val name: String,
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
@@ -33,7 +33,7 @@ data class Role(
         joinColumns = [JoinColumn(name = "role_id")],
         inverseJoinColumns = [JoinColumn(name = "permission_id")]
     )
-    protected val permissions:Set<Permission> = HashSet(),
+    public val permissions:Set<Permission> = HashSet(),
 
     @ManyToMany(mappedBy = "roles",fetch = FetchType.LAZY)
     protected val users:Set<User> =HashSet(),
