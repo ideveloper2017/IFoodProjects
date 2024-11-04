@@ -4,11 +4,20 @@ package uz.ifood.app
 import com.mycompany.myapp.config.ApplicationProperties
 import io.swagger.v3.oas.annotations.OpenAPIDefinition
 import org.slf4j.LoggerFactory
+import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
+import org.springframework.context.annotation.Bean
 import org.springframework.core.env.Environment
+import org.springframework.security.crypto.password.PasswordEncoder
+import uz.ifood.app.api.v1.entity.Permission
+import uz.ifood.app.api.v1.entity.Role
+import uz.ifood.app.api.v1.entity.User
+import uz.ifood.app.api.v1.repository.PermissionRepository
+import uz.ifood.app.api.v1.repository.RoleRepository
+import uz.ifood.app.api.v1.repository.UserRepository
 import kotlin.jvm.javaClass
 
 @SpringBootApplication

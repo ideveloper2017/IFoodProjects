@@ -1,10 +1,13 @@
 package uz.ifood.app.v1.repository
 
 import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.data.jpa.repository.query.Procedure
 import org.springframework.stereotype.Repository
-import uz.ifood.app.api.v1.entity.Departments
+import uz.ifood.app.v1.entity.Goods
 
 @Repository
-interface DepartmentRepository: CrudRepository<Departments,Long> {
+interface GoodsRepository: CrudRepository<Goods,Long> {
+
+
 
 }
