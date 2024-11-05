@@ -60,13 +60,6 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>org.firebirdsql.jdbc</groupId>
-			<artifactId>jaybird</artifactId>
-			<version>2.2.15</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
@@ -163,6 +156,14 @@
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>io.spring.dependency-management</groupId>
+			<artifactId>io.spring.dependency-management.gradle.plugin</artifactId>
+			<version>1.1.6</version>
+			<type>pom</type>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -172,11 +173,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-maven-plugin</artifactId>
-				<version>6.5.5</version>
-			</plugin>
+
 			<plugin>
 				<groupId>org.jetbrains.kotlin</groupId>
 				<artifactId>kotlin-maven-plugin</artifactId>
@@ -206,6 +203,21 @@
 						<version>${kotlin.version}</version>
 					</dependency>
 				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+<!--				<version>10.14.0</version> &lt;!&ndash; Use the latest version available &ndash;&gt;-->
+				<configuration>
+					<url>jdbc:postgresql://localhost:5432/Restaurant</url>
+					<user>postgres</user>
+					<password>postgres</password>
+					<schemas>public</schemas> <!-- Optional: specify the schema if needed -->
+					<locations>
+						<location>classpath:db/migration</location>
+					</locations>
+					<baselineOnMigrate>true</baselineOnMigrate>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

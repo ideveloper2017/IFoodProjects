@@ -27,10 +27,7 @@ data class Warehouse(
 
     @OneToMany(mappedBy = "warehouse", cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     val department: List<Departments>? = mutableListOf<Departments>(),
-
     override var createdDate: Instant? = Instant.now(),
-    override var lastModifiedDate: Instant? = Instant.now()
-): BaseEntity<Long>(createdDate, lastModifiedDate), Serializable {
-
-
+    override var updateDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updateDate), Serializable {
 }

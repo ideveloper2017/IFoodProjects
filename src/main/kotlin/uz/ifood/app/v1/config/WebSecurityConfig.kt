@@ -24,7 +24,7 @@ import org.springframework.web.reactive.config.WebFluxConfigurer
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-class WebSecurityConfig: WebSecurityConfigurerAdapter(),WebFluxConfigurer {
+class WebSecurityConfig : WebSecurityConfigurerAdapter(), WebFluxConfigurer {
 
     @Autowired
     internal var userDetailsService: UserDetailsServiceImpl? = null
@@ -96,18 +96,16 @@ class WebSecurityConfig: WebSecurityConfigurerAdapter(),WebFluxConfigurer {
 //    }
 
 
-@Throws(Exception::class)
-override protected fun configure(http: HttpSecurity) {
-    http.
-    csrf().disable().authorizeRequests()
-        .antMatchers("/**").permitAll()
-        .anyRequest().authenticated()
-        .and()
-        .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-    http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter::class.java)
-}
-
+    @Throws(Exception::class)
+    override protected fun configure(http: HttpSecurity) {
+        http.csrf().disable().authorizeRequests()
+            .antMatchers("/**").permitAll()
+            .anyRequest().authenticated()
+            .and()
+            .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+        http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter::class.java)
+    }
 
 }
 

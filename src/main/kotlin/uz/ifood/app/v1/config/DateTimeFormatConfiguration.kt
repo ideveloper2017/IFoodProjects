@@ -1,4 +1,4 @@
-package com.mycompany.myapp.config
+package uz.ifood.app.v1.config
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.format.FormatterRegistry

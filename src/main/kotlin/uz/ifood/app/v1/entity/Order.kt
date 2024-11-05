@@ -19,7 +19,6 @@ data class Order(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int? =0,
     override var createdDate: Instant? = Instant.now(),
-    override var lastModifiedDate: Instant? = Instant.now()
-): BaseEntity<Long>(createdDate, lastModifiedDate), Serializable {
-
+    override var updateDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updateDate), Serializable {
 }

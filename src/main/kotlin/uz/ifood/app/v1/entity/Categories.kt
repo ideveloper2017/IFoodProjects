@@ -58,8 +58,9 @@ data class Categories(
     val goods:List<Goods>?=mutableListOf<Goods>(),
 
     override var createdDate: Instant? = Instant.now(),
-    override var lastModifiedDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, lastModifiedDate), Serializable {
+    override var updateDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updateDate), Serializable {
+
 
     companion object {
         const val TABLE_NAME: String = "ss_categories"

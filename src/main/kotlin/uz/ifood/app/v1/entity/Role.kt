@@ -34,7 +34,7 @@ data class Role(
 
     @ManyToMany(mappedBy = "roles",fetch = FetchType.LAZY)
     protected val users:Set<User> =HashSet(),
-
     override var createdDate: Instant? = Instant.now(),
-    override var lastModifiedDate: Instant? = Instant.now()
-): BaseEntity<Long>(createdDate, lastModifiedDate), Serializable
+    override var updateDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updateDate), Serializable {
+}

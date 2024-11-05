@@ -29,8 +29,7 @@ data class Unit(
 
     @OneToMany(mappedBy = "unit", cascade = [CascadeType.ALL])
     val goods:List<Goods>?=mutableListOf<Goods>(),
-
     override var createdDate: Instant? = Instant.now(),
-    override var lastModifiedDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, lastModifiedDate), Serializable {
+    override var updateDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updateDate), Serializable {
 }

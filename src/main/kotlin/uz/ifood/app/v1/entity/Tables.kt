@@ -31,9 +31,7 @@ data class Tables(
     @ManyToOne(fetch = FetchType.LAZY,cascade = [(CascadeType.ALL)])
     @JoinColumn(name = "hall_id")
     var halls: Halls,
-
     override var createdDate: Instant? = Instant.now(),
-    override var lastModifiedDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, lastModifiedDate), Serializable {
-
+    override var updateDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updateDate), Serializable {
 }

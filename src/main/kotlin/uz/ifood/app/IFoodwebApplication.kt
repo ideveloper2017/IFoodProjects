@@ -1,7 +1,7 @@
 package uz.ifood.app
 
 
-import com.mycompany.myapp.config.ApplicationProperties
+
 import io.swagger.v3.oas.annotations.OpenAPIDefinition
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
@@ -18,6 +18,7 @@ import uz.ifood.app.api.v1.entity.User
 import uz.ifood.app.api.v1.repository.PermissionRepository
 import uz.ifood.app.api.v1.repository.RoleRepository
 import uz.ifood.app.api.v1.repository.UserRepository
+import uz.ifood.app.v1.config.ApplicationProperties
 import kotlin.jvm.javaClass
 
 @SpringBootApplication

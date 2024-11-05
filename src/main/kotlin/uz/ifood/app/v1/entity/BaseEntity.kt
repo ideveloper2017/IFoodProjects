@@ -14,7 +14,7 @@ abstract class BaseEntity<T>(
 
                              @LastModifiedDate
                              @Column(name = "update_date")
-                             open var lastModifiedDate: Instant? = Instant.now()
+                             open var updateDate: Instant? = Instant.now()
     ) : Serializable {
 
 

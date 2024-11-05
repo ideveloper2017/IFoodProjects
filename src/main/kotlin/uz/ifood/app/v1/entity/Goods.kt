@@ -63,6 +63,6 @@ data class Goods(
     var image: String?=null,
 
     override var createdDate: Instant? = Instant.now(),
-    override var lastModifiedDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, lastModifiedDate), Serializable {
+    override var updateDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updateDate), Serializable {
 }

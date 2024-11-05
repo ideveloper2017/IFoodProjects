@@ -15,13 +15,13 @@ import javax.persistence.Table
 data class Apps(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id:Int=0,
+    var id:Int?=0,
 
     @Column(name = "name")
-    var name:String="",
+    var name:String?="",
 
     @Column(name = "class_name")
-    var className:String="",
+    var className:String?="",
 
     @Column(name = "icon")
     var icon:String="",
@@ -33,6 +33,6 @@ data class Apps(
     var state:Int=0,
 
     override var createdDate: Instant? = Instant.now(),
-    override var lastModifiedDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, lastModifiedDate), Serializable {
+    override var updateDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updateDate), Serializable {
 }
