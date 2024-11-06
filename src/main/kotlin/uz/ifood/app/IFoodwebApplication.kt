@@ -1,7 +1,5 @@
 package uz.ifood.app
 
-
-
 import io.swagger.v3.oas.annotations.OpenAPIDefinition
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
