@@ -22,7 +22,7 @@ data class Unit(
     var name: String,
 
     @Column(name="status")
-    var status: Boolean?=true,
+    var status: Int?=0,
 
     @Column(name="orderby")
     var orderby: Int?=0,

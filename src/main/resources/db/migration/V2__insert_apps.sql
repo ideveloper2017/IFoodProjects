@@ -1,3 +1,4 @@
+
 INSERT INTO apps(ID, NAME,  CLASS_NAME, ICON, DESCRIPTION, STATE,created_date,update_date) VALUES (1, 'Администрирование',  'TAdminForm', 0, 'Администрирование', 1,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);
 INSERT INTO apps(ID, NAME,  CLASS_NAME, ICON, DESCRIPTION, STATE,created_date,update_date) VALUES (52, 'Инвентаризация',  'TFrmInvent', 8, 'Инвентаризация', 1,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);
 INSERT INTO apps(ID, NAME,  CLASS_NAME, ICON, DESCRIPTION, STATE,created_date,update_date) VALUES (60, 'Отчеты',  'TFrmReporst', 9, 'Отчеты', 1,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);

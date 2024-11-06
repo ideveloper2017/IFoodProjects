@@ -1,0 +1,16 @@
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (1, 'F1  - Перейти в таблицу СТОЛЫ', 1, 0,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (2, 'F2  - Перейти в таблицу ЗАКАЗЫ', 1, 1,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (3, 'F3  - Перейти в таблицу ГРУППЫ', 1, 2,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (4, 'F4  - Перейти в таблицу БЛЮДЫ', 1, 3,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (5, 'F5  - Открыть окно дисконтной карты', 1, 4,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (6, 'F6  - Наличка, безналичка', 1, 6,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (7, 'F7  - Освободить cтол', 1, 7,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (8, 'F8  - Печать текущий заказ', 1, 8,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (9, 'F9  - Печать заказы', 1, 8,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (10, 'F10 - Печать чек', 1, 9,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (11, 'F11 - Официанты', 1, 10,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (12, 'F12 - Информация о полученных заказов', 1, 11,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (13, 'CTRL+X - Заблокировать программу', 1, 12,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (14, 'CTRL+Q - Менять количество текушего заказа', 1, 13,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (15, 'CTRL+A - Гости', 1, 14,current_timestamp,current_timestamp);
+INSERT INTO APPS_HELP(ID, STR_VAL, STATE, ORDERBY,created_date,update_date) VALUES (16, 'CTRL+S - Блокировка/разблокировка', 1, 15,current_timestamp,current_timestamp);
