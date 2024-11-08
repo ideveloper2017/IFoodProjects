@@ -26,8 +26,8 @@ data class User(
         inverseJoinColumns = [JoinColumn(name = "role_id", referencedColumnName = "id")]
     ) var roles: Collection<Role>? = null,
     override var createdDate: Instant? = Instant.now(),
-    override var updateDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, updateDate), Serializable {
+    override var updatedDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updatedDate), Serializable {
 }
 
 

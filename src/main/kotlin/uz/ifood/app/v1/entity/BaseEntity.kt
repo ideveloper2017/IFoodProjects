@@ -13,8 +13,8 @@ abstract class BaseEntity<T>(
                              open var createdDate: Instant? = Instant.now(),
 
                              @LastModifiedDate
-                             @Column(name = "update_date")
-                             open var updateDate: Instant? = Instant.now()
+                             @Column(name = "updated_date")
+                             open var updatedDate: Instant? = Instant.now()
     ) : Serializable {
 
 

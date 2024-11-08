@@ -32,6 +32,6 @@ data class Tables(
     @JoinColumn(name = "hall_id")
     var halls: Halls,
     override var createdDate: Instant? = Instant.now(),
-    override var updateDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, updateDate), Serializable {
+    override var updatedDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updatedDate), Serializable {
 }

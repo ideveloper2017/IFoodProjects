@@ -58,8 +58,8 @@ data class Categories(
     val goods:List<Goods>?=mutableListOf<Goods>(),
 
     override var createdDate: Instant? = Instant.now(),
-    override var updateDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, updateDate), Serializable {
+    override var updatedDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updatedDate), Serializable {
 
 
     companion object {

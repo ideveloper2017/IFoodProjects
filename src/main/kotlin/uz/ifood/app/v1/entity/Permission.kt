@@ -17,6 +17,6 @@ class Permission (
     @ManyToMany(mappedBy = "permissions")
     var roles:Set<Role> = HashSet(),
     override var createdDate: Instant? = Instant.now(),
-    override var updateDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, updateDate), Serializable {
+    override var updatedDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updatedDate), Serializable {
 }

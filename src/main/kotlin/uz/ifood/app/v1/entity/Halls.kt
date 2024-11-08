@@ -25,6 +25,6 @@ data class Halls(
     val tables: MutableSet<Tables> = mutableSetOf(),
 
     override var createdDate: Instant? = Instant.now(),
-    override var updateDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, updateDate), Serializable {
+    override var updatedDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updatedDate), Serializable {
 }

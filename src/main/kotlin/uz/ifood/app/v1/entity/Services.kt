@@ -18,7 +18,11 @@ data class Services(
 
     @Column(name = "name", nullable = false)
     var name: String,
+
+    @Column(name = "active", nullable = false)
+    var active: Int?=0,
+
     override var createdDate: Instant? = Instant.now(),
-    override var updateDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, updateDate), Serializable {
+    override var updatedDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updatedDate), Serializable {
 }

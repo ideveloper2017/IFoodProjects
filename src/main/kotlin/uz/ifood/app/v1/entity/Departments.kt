@@ -37,8 +37,8 @@ data class Departments(
     val category: List<Categories>?= mutableListOf<Categories>(),
 
     override var createdDate: Instant? = Instant.now(),
-    override var updateDate: Instant? = Instant.now()
-) : BaseEntity<Long>(createdDate, updateDate), Serializable {
+    override var updatedDate: Instant? = Instant.now()
+) : BaseEntity<Long>(createdDate, updatedDate), Serializable {
 
 
     companion object {
