@@ -1,5 +1,6 @@
 package uz.ifood.app.v1.entity
 
+import org.hibernate.annotations.Type
 import uz.ifood.app.api.v1.entity.BaseEntity
 import java.io.Serializable
 import java.time.Instant
@@ -9,6 +10,7 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.Table
+import javax.validation.constraints.Size
 
 @Entity
 @Table(name = "ss_services")
@@ -17,7 +19,12 @@ data class Services(
     @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long? = 0,
 
     @Column(name = "name", nullable = false)
+    @field:Size(min = 3, max = 255)
     var name: String,
+
+    @Column(name = "value", nullable = false)
+    @field:Type(type = "int")
+    val value: Int?=0,
 
     @Column(name = "active", nullable = false)
     var active: Int?=0,
