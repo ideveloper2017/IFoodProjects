@@ -25,12 +25,13 @@ data class Tables(
     @Column(name="name")
     val name:String,
 
-    @Column(name="is_service")
-    val isService: Int?=0,
+    @Column(name="service_price")
+    val servicePrice:Double,
 
     @ManyToOne(fetch = FetchType.LAZY,cascade = [(CascadeType.ALL)])
     @JoinColumn(name = "hall_id")
     var halls: Halls,
+
     override var createdDate: Instant? = Instant.now(),
     override var updatedDate: Instant? = Instant.now()
 ) : BaseEntity<Long>(createdDate, updatedDate), Serializable {

@@ -3,32 +3,31 @@ package uz.ifood.app.v1.entity
 import uz.ifood.app.api.v1.entity.BaseEntity
 import java.io.Serializable
 import java.time.Instant
-import javax.persistence.CascadeType
 import javax.persistence.Column
 import javax.persistence.Entity
+import javax.persistence.FetchType
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
-import javax.persistence.OneToMany
+import javax.persistence.JoinColumn
+import javax.persistence.ManyToOne
 import javax.persistence.Table
 
 @Entity
-@Table(name = "ss_unit")
-data class Unit(
+@Table(name="ss_settings")
+data class Settings(
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) var id: Long? = 0,
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Int? = 0,
 
-    @Column(name = "name")
-    var name: String,
+    @Column(name="my_value",nullable = false, length = 100)
+    var my_value: String? = null,
 
-    @Column(name="status")
-    var status: Int?=0,
+    @Column(name="name",length = 100)
+    var name: String? = null,
 
-    @Column(name="orderby")
-    var orderby: Int?=0,
-
-    @OneToMany(mappedBy = "unit", cascade = [CascadeType.ALL])
-    val goods:List<Goods>?=mutableListOf<Goods>(),
+    @Column(name="is_enabled")
+    var isEnabled: Int = 0,
 
     override var createdDate: Instant? = Instant.now(),
     override var updatedDate: Instant? = Instant.now()

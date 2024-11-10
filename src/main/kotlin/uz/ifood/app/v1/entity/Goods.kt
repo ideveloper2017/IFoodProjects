@@ -23,13 +23,15 @@ data class Goods(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long?=0,
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     var categories: Categories,
 
     @Column(name = "name")
     var name:String?="",
+
+    @Column(name = "barcode", length = 13)
+    var barcode:String?="",
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "unit_id")
