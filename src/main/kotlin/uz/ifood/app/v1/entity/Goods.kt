@@ -64,6 +64,12 @@ data class Goods(
     @Column(name="image")
     var image: String?=null,
 
+    @Column(name="num")
+    var num: Int?=0,
+
+    @Column(name="stop_list")
+    var stopList: Boolean?=false,
+
     override var createdDate: Instant? = Instant.now(),
     override var updatedDate: Instant? = Instant.now()
 ) : BaseEntity<Long>(createdDate, updatedDate), Serializable {
