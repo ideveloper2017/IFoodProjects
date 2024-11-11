@@ -22,7 +22,6 @@ data class Country(
 
     @Column(name="ISO", length = 30)
     var iso: String?=null,
-
     override var createdDate: Instant? = Instant.now(),
     override var updatedDate: Instant? = Instant.now()
 ) : BaseEntity<Long>(createdDate, updatedDate), Serializable {

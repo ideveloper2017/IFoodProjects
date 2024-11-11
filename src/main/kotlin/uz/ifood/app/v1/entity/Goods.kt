@@ -5,6 +5,8 @@ import uz.ifood.app.api.v1.entity.BaseEntity
 import uz.ifood.app.api.v1.entity.Categories
 import java.io.Serializable
 import java.time.Instant
+import java.time.LocalDateTime
+import java.time.LocalTime
 import javax.persistence.CascadeType
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -69,6 +71,12 @@ data class Goods(
 
     @Column(name="stop_list")
     var stopList: Boolean?=false,
+
+    @Column(name="available_time_starts")
+    var availableTimeStarts: LocalTime,
+
+    @Column(name="available_time_ends")
+    var available_time_ends: LocalTime,
 
     override var createdDate: Instant? = Instant.now(),
     override var updatedDate: Instant? = Instant.now()
