@@ -28,6 +28,7 @@ data class User(
     override var createdDate: Instant? = Instant.now(),
     override var updatedDate: Instant? = Instant.now()
 ) : BaseEntity<Long>(createdDate, updatedDate), Serializable {
+
 }
 
 

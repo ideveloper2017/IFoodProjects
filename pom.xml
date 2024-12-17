@@ -80,11 +80,11 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.1</version>
 		</dependency>
-		<!--        <dependency>-->
-		<!--            <groupId>io.amplicode</groupId>-->
-		<!--            <artifactId>react-admin-utils-starter</artifactId>-->
-		<!--            <version>0.2.0</version>-->
-		<!--        </dependency>-->
+		        <dependency>
+		            <groupId>io.amplicode</groupId>
+		            <artifactId>react-admin-utils-starter</artifactId>
+		            <version>0.2.0</version>
+		        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
@@ -106,7 +106,7 @@
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.7</version>
+			<version>2.14.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -212,7 +212,6 @@
 			<plugin>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
-<!--				<version>10.14.0</version> &lt;!&ndash; Use the latest version available &ndash;&gt;-->
 				<configuration>
 					<url>jdbc:postgresql://localhost:5432/Restaurant</url>
 					<user>postgres</user>
